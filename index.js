@@ -58,9 +58,8 @@ app.put('/produtos/:id', (req, res) => {
 
 app.delete('/produtos/:id', (req, res) => {
     produtos = produtos.filter(p => p.id !== req.params.id);
-    res.status(204).send();
+    res.status(204).send(`Produtos: ${produtos}`);
 });
-
 
 app.get('/vendas', (req, res) => res.json(vendas));
 
